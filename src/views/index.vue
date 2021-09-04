@@ -67,7 +67,7 @@
       </div>
       <div class="flow-container">
         <simple-flow-chart
-          ref="superFlow"
+          ref="flowChart"
           :nodeMenu="nodeMenu"
           :linkMenu="linkMenuList"
           :linkBaseStyle="linkBaseStyle"
@@ -485,7 +485,7 @@ export default {
       link.meta.desc = prompt('') || 0;
     },
     onDragend(e, item) {
-      const node = this.$refs.superFlow.addNodeIfNeed(e, {
+      const node = this.$refs.flowChart.addNodeIfNeed(e, {
         ...basicNodeInfo,
         ...item
       });
@@ -497,7 +497,7 @@ export default {
     },
     addTemplate(list) {
       const nodes = list.map(x => ({ ...basicNodeInfo, ...x }));
-      this.$refs.superFlow.addTemplate(nodes);
+      this.$refs.flowChart.addTemplate(nodes);
       this.basicNodeList.forEach(e => {
         this.$set(e, 'disabled', false);
         const node = list.find(n => n.id == e.id);
@@ -564,7 +564,7 @@ export default {
       }
     },
     submit() {
-      const { linkList, nodeList } = this.$refs.superFlow.graph;
+      const { linkList, nodeList } = this.$refs.flowChart.graph;
       console.log(JSON.stringify(linkList));
       console.log(JSON.stringify(nodeList));
     }
