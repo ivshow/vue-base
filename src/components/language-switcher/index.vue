@@ -40,7 +40,7 @@ export default {
     };
   },
   created() {
-    this.index = this.$findIndex(this.languages, { value: this.vuex_common.language });
+    this.index = this.$do.findIndex(this.languages, { value: this.vuex_common.language });
   },
   methods: {
     handleSwitch(action, index) {

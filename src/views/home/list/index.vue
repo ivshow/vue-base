@@ -11,8 +11,8 @@ export default {
   render() {
     return (
       <div>
-        <v-nav-bar title="首页列表"></v-nav-bar>
-        <v-title color="red">Title</v-title>
+        <nav-bar title="首页列表"></nav-bar>
+        <color-title color="red">Title</color-title>
       </div>
     );
   }

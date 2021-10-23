@@ -11,20 +11,20 @@ import _ from 'lodash';
 import ls from 'local-storage';
 import dayjs from 'dayjs';
 import jsCookie from 'js-cookie';
-import { addPrototypeToVue, parseContext } from './common';
+import { addPrototype, parseContext } from './common';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import 'dayjs/locale/zh-cn';
+
+dayjs.locale('zh-cn');
+dayjs.extend(relativeTime);
 
 const context = require.context('./', false, /^(?!\.\/index).*\.js$/);
 const utils = parseContext(context);
 
-addPrototypeToVue('ls', ls);
-addPrototypeToVue('dayjs', dayjs);
-addPrototypeToVue('cookie', jsCookie);
-addPrototypeToVue('event', new Vue());
-
-// 挂载lodash
-_.forEach(_, (value, key) => addPrototypeToVue(key, value, 'lodash'));
-
-// 挂载utils
-_.forEach(utils, (value, key) => addPrototypeToVue(key, value));
+addPrototype('do', Object.assign(utils, _));
+addPrototype('ls', ls);
+addPrototype('dayjs', dayjs);
+addPrototype('cookie', jsCookie);
+addPrototype('event', new Vue());
 
 module.exports = utils;

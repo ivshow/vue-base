@@ -9,7 +9,7 @@
 <template>
   <van-nav-bar v-bind="{ ...$attrs, ...$props }" left-arrow @click-left="onClickLeft">
     <template #right>
-      <v-language-switcher></v-language-switcher>
+      <language-switcher></language-switcher>
     </template>
   </van-nav-bar>
 </template>

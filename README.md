@@ -2,12 +2,12 @@
 
 <hr/>
 
-1. component: 文件名作为组件名，使用时以 v- 开头，支持 jsx 写法
+1. component: 文件名使用-链接作为组件名，支持 jsx 写法
 
 ```js
-<v-nav-bar :title="$t('title')" @clickBack="onClickBack"></v-nav-bar>
+<nav-bar :title="$t('title')" @clickBack="onClickBack"></nav-bar>
 
-<v-icon name="more"></v-icon>
+<svg-icon name="more"></s-icon>
 ```
 
 2. vant:
@@ -90,7 +90,7 @@ this.$customUtil();
 7. scss: 内置 class，变量注入
 
 ```css
-.u-rela .u-flex .u-flex-1 .u-text-left .u-font-10 .u-m-10 .u-p-10 ...;
+.d-rela .d-flex .d-flex-1 .d-text-left .d-font-10 .d-m-10 .d-p-10 ...;
 ```
 
 ```js

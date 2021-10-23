@@ -6,92 +6,92 @@
  * @Blog   : http://dooomi.com
  */
 
-.u-relative,
-.u-rela {
+.d-relative,
+.d-rela {
   position: relative;
 }
 
-.u-absolute,
-.u-abso {
+.d-absolute,
+.d-abso {
   position: absolute;
 }
 
-.u-flex {
+.d-flex {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.u-flex-wrap {
+.d-flex-wrap {
   flex-wrap: wrap;
 }
 
-.u-flex-nowrap {
+.d-flex-nowrap {
   flex-wrap: nowrap;
 }
 
-.u-col-center {
+.d-col-center {
   align-items: center;
 }
 
-.u-col-top {
+.d-col-top {
   align-items: flex-start;
 }
 
-.u-col-bottom {
+.d-col-bottom {
   align-items: flex-end;
 }
 
-.u-row-center {
+.d-row-center {
   justify-content: center;
 }
 
-.u-row-left {
+.d-row-left {
   justify-content: flex-start;
 }
 
-.u-row-right {
+.d-row-right {
   justify-content: flex-end;
 }
 
-.u-row-between {
+.d-row-between {
   justify-content: space-between;
 }
 
-.u-row-around {
+.d-row-around {
   justify-content: space-around;
 }
 
-.u-text-left {
+.d-text-left {
   text-align: left;
 }
 
-.u-text-center {
+.d-text-center {
   text-align: center;
 }
 
-.u-text-right {
+.d-text-right {
   text-align: right;
 }
 
-.u-flex-col {
+.d-flex-col {
   display: flex;
   flex-direction: column;
 }
 
-.u-hide {
+.d-hide {
   display: none;
 }
 
 // 定义flex等分
 @for $i from 0 through 12 {
-  .u-flex-#{$i} {
+  .d-flex-#{$i} {
     flex: $i;
   }
 }
 
 @for $i from 9 to 40 {
-  .u-font-#{$i} {
+  .d-font-#{$i} {
     font-size: $i + px;
   }
 }
@@ -101,37 +101,37 @@
   // 只要双数和能被5除尽的数
   @if $i % 2 == 0 or $i % 5 == 0 {
     // 得出：u-margin-30或者u-m-30
-    .u-margin-#{$i},
-    .u-m-#{$i} {
+    .d-margin-#{$i},
+    .d-m-#{$i} {
       margin: $i + px !important;
     }
 
     // 得出：u-padding-30或者u-p-30
-    .u-padding-#{$i},
-    .u-p-#{$i} {
+    .d-padding-#{$i},
+    .d-p-#{$i} {
       padding: $i + px !important;
     }
 
     @each $short, $long in l left, t top, r right, b bottom {
-      // 缩写版，结果如： u-m-l-30
+      // 缩写版，结果如： d-m-l-30
       // 定义外边距
-      .u-m-#{$short}-#{$i} {
+      .d-m-#{$short}-#{$i} {
         margin-#{$long}: $i + px !important;
       }
 
       // 定义内边距
-      .u-p-#{$short}-#{$i} {
+      .d-p-#{$short}-#{$i} {
         padding-#{$long}: $i + px !important;
       }
 
       // 完整版，结果如：u-margin-left-30
       // 定义外边距
-      .u-margin-#{$long}-#{$i} {
+      .d-margin-#{$long}-#{$i} {
         margin-#{$long}: $i + px !important;
       }
 
       // 定义内边距
-      .u-padding-#{$long}-#{$i} {
+      .d-padding-#{$long}-#{$i} {
         padding-#{$long}: $i + px !important;
       }
     }

@@ -13,7 +13,7 @@
 <script>
 export default {
   async created() {
-    const token = await this.$login();
+    const token = await this.$api.login();
     this.$ls('token', token);
     this.$router.push('/home');
   }

@@ -6,9 +6,9 @@
  * @Blog   : http://dooomi.com
  */
 
-import { addPrototypeToVue } from '@/utils';
+import { addPrototype } from '@/utils';
 import variables from './variables.scss';
 import './index.scss';
 
 // 挂载scss变量
-addPrototypeToVue('themes', variables);
+addPrototype('themes', variables);
