@@ -8,6 +8,6 @@
 
 import styled from 'vue-styled-components';
 
-export const Title = styled.div`
+export const ColorTitle = styled.div`
   color: ${props => props.color};
 `;

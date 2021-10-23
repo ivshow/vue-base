@@ -6,7 +6,6 @@
  * @Blog   : http://dooomi.com
  */
 
-import _ from 'lodash';
 import http from './http';
 import { parseContext, addPrototypeToVue } from '@/utils';
 
@@ -14,7 +13,7 @@ const context = require.context('./apis', false, /\.js$/);
 const apis = parseContext(context);
 
 // 挂载api
-_.forEach(apis, (value, key) => addPrototypeToVue(key, value));
+addPrototypeToVue('api', apis);
 addPrototypeToVue('http', http);
 
 module.exports = apis;

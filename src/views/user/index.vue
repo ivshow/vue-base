@@ -36,7 +36,7 @@ export default {
     openModal({ title, onOk, value }) {
       this.$openModal({
         title,
-        content: <v-form ref="form" value={value} />,
+        content: <base-form ref="form" value={value} />,
         onOk: () => this.$refs.form.submit().then(onOk).then(this.refresh)
       });
     },

@@ -2,12 +2,12 @@
 
 <hr/>
 
-1. component: 文件名作为组件名，使用时以 v- 开头，支持 jsx 写法
+1. component: 文件名使用`-`链接作为组件名，支持 jsx 写法
 
 ```js
-<v-nav-bar :title="$t('title')" @clickBack="onClickBack"></v-nav-bar>
+<nav-bar :title="$t('title')" @clickBack="onClickBack"></nav-bar>
 
-<v-icon name="more"></v-icon>
+<svg-icon name="more"></s-icon>
 ```
 
 2. ant-design-vue:

@@ -6,21 +6,15 @@
  * @Blog   : http://dooomi.com
  */
 
-$black: #000;
-$white: #fff;
-$gray-1: #f7f8fa;
-$gray-2: #f2f3f5;
-$gray-3: #ebedf0;
-$gray-4: #dcdee0;
-$gray-5: #c8c9cc;
-$gray-6: #969799;
-$gray-7: #646566;
-$gray-8: #323233;
-$red: #ee0a24;
-$blue: #1989fa;
-$orange: #ff976a;
-$green: #07c160;
+$primary: #f14196;
+
+$text-main: rgba(0, 0, 0, 0.85);
+$text-minor: rgba(0, 0, 0, 0.65);
+$text-regular: rgba(0, 0, 0, 0.45);
+
+$background: #f4f5f6;
+$linear-gradient: linear-gradient(90.07deg, #d14dec 1.42%, #f64d95 101.18%), #c4c4c4;
 
 :export {
-  black: $black;
+  primary: $primary;
 }
