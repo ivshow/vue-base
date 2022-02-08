@@ -28,9 +28,6 @@ module.exports = {
   lintOnSave: true,
   css: {
     loaderOptions: {
-      postcss: {
-        plugins: []
-      },
       sass: {
         prependData: `@import "@/styles/variables.scss", "doui-vue/dist/mixin.scss";`
       }

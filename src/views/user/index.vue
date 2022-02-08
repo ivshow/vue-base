@@ -43,7 +43,7 @@ export default {
     handleAdd() {
       this.openModal({
         title: '新增',
-        onOk: () => this.$getGoodsDetail({ goodsId: 'c74bab3130f448a988d2f1f9b5fd0c23' })
+        onOk: () => this.$api.getGoodsDetail({ goodsId: 'c74bab3130f448a988d2f1f9b5fd0c23' })
       });
     },
     handleEdit() {

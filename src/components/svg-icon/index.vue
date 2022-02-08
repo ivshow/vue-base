@@ -7,12 +7,7 @@
 -->
 
 <template>
-  <svg
-    :class="`svg-icon icon-${name}`"
-    :style="{
-      fontSize: size + 'px'
-    }"
-  >
+  <svg :class="`svg-icon icon-${name}`" :style="{ fontSize: size + 'px' }" @click="$emit('click')">
     <use :xlink:href="`#icon-${name}`" />
   </svg>
 </template>

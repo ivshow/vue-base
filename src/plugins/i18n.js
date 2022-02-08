@@ -19,9 +19,9 @@ const messages = context.keys().reduce((prev, key) => {
   return prev;
 }, {});
 
-const createI18n = state =>
+const createI18n = ({ vuex_common }) =>
   new VueI18n({
-    locale: state.vuex_common.language,
+    locale: vuex_common.language,
     messages
   });
 
