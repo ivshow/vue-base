@@ -7,7 +7,7 @@
 ```js
 <nav-bar :title="$t('title')" @clickBack="onClickBack"></nav-bar>
 
-<svg-icon name="more"></s-icon>
+<svg-icon name="more"></svg-icon>
 ```
 
 2. ant-design-vue:
